@@ -26,7 +26,13 @@ public class Main {
         }
         System.out.println("Сумма трат за месяц составила " + sumPerMonth + " рублей");
 
+        //task2
 
+        Arrays.sort(arr);
+        int minSpending = arr[0];
+        int maxSpending = arr[arr.length - 1];
+        System.out.print("Минимальная сумма трат за день составила " + minSpending + " рублей. ");
+        System.out.println("Максимальная сумма трат за день составила " + maxSpending + " рублей. ");
     }
 
 
