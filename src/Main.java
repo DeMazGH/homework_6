@@ -51,10 +51,41 @@ public class Main {
 
         //task4
 
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length - 1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
         }
+        System.out.println();
+
+        //task5
+
+        int[][] matrix = new int[3][3];
+        int desiredNum = 1;
+
+        for (int i = 0; i < matrix.length; i++) {
+            if (i % 2 == 0) {
+                for (int j = 0; j < matrix[0].length; j++) {
+                    if (j % 2 == 0) {
+                        matrix[j][i] = desiredNum;
+                    }
+                }
+            } else {
+                for (int j = 0; j < matrix[0].length; j++) {
+                    if (j % 2 != 0) {
+                        matrix[j][i] = desiredNum;
+                    }
+                }
+            }
+        }
+
+        for (int[] row : matrix) {
+            for (int column : row) {
+                System.out.print(column + " ");
+            }
+            System.out.println();
+
+        }
+        System.out.println();
     }
 
 
