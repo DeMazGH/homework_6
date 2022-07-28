@@ -30,9 +30,16 @@ public class Main {
 
         //task2
 
-        Arrays.sort(arr);
         int minSpending = arr[0];
-        int maxSpending = arr[arr.length - 1];
+        int maxSpending = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (minSpending > arr[i]) {
+                minSpending = arr[i];
+            }
+            if (maxSpending < arr[i]) {
+                maxSpending = arr[i];
+            }
+        }
         System.out.print("Минимальная сумма трат за день составила " + minSpending + " рублей. ");
         System.out.println("Максимальная сумма трат за день составила " + maxSpending + " рублей. ");
 
