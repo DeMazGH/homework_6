@@ -117,6 +117,21 @@ public class Main {
 
         int[] givenArray = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
         Arrays.sort(givenArray);
+        int desiredNum1 = givenArray[0];
+        int desiredNum2 = givenArray[0];
+
+        for (int k : givenArray) {
+            for (int i : givenArray) {
+                if (k + i == -2) {
+                    desiredNum1 = k;
+                    desiredNum2 = i;
+                }
+            }
+        }
+        System.out.println("Искомые числа " + desiredNum1 + ", " + desiredNum2 + ". Их сумма равна - 2.");
+        System.out.println();
+
+        //task9
 
         for (int desiredNumOne : givenArray) {
             if (desiredNumOne < 0) {
