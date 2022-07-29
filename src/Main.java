@@ -57,6 +57,8 @@ public class Main {
         }
         System.out.println();
 
+        //task5-9: https://skypro.slack.com/archives/C02R4PPHQGM/p1658926227724979
+
         //task5
 
         int[][] matrix = new int[3][3];
@@ -83,7 +85,6 @@ public class Main {
                 System.out.print(column + " ");
             }
             System.out.println();
-
         }
         System.out.println();
 
@@ -102,14 +103,31 @@ public class Main {
 
         //task7
 
+        System.out.println(Arrays.toString(reverseIntArray));
         arraySize = reverseIntArray.length;
-
         for (int i = 0; i < arraySize / 2; i++) {
             int buffer = reverseIntArray[i];
             reverseIntArray[i] = reverseIntArray[arraySize - 1 - i];
             reverseIntArray[arraySize - 1 - i] = buffer;
         }
         System.out.println(Arrays.toString(reverseIntArray));
+        System.out.println();
+
+        //task8
+
+        int[] givenArray = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
+        Arrays.sort(givenArray);
+
+        for (int desiredNumOne : givenArray) {
+            if (desiredNumOne < 0) {
+                for (int desiredNumTwo : givenArray) {
+                    if (desiredNumOne + desiredNumTwo == -2) {
+                        System.out.println("Искомые числа " + desiredNumOne + ", " + desiredNumTwo + ". Их сумма равна - 2.");
+                    }
+                }
+            }
+        }
+
     }
 
 
