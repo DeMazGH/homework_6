@@ -98,6 +98,18 @@ public class Main {
         }
         System.out.println(Arrays.toString(reverseIntArray));
         System.out.println(Arrays.toString(intArray));
+        System.out.println();
+
+        //task7
+
+        arraySize = reverseIntArray.length;
+
+        for (int i = 0; i < arraySize / 2; i++) {
+            int buffer = reverseIntArray[i];
+            reverseIntArray[i] = reverseIntArray[arraySize - 1 - i];
+            reverseIntArray[arraySize - 1 - i] = buffer;
+        }
+        System.out.println(Arrays.toString(reverseIntArray));
     }
 
 
