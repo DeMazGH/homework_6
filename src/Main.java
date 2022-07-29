@@ -32,12 +32,12 @@ public class Main {
 
         int minSpending = arr[0];
         int maxSpending = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (minSpending > arr[i]) {
-                minSpending = arr[i];
+        for (int currentSpending : arr) {
+            if (minSpending > currentSpending) {
+                minSpending = currentSpending;
             }
-            if (maxSpending < arr[i]) {
-                maxSpending = arr[i];
+            if (maxSpending < currentSpending) {
+                maxSpending = currentSpending;
             }
         }
         System.out.print("Минимальная сумма трат за день составила " + minSpending + " рублей. ");
@@ -86,6 +86,18 @@ public class Main {
 
         }
         System.out.println();
+
+        //task6
+
+        int[] reverseIntArray = {5, 4, 3, 2, 1};
+        int arraySize = reverseIntArray.length;
+        int[] intArray = new int[arraySize];
+
+        for (int i = 0; i < reverseIntArray.length; i++) {
+            intArray[--arraySize] = reverseIntArray[i];
+        }
+        System.out.println(Arrays.toString(reverseIntArray));
+        System.out.println(Arrays.toString(intArray));
     }
 
 
