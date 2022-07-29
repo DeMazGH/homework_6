@@ -3,7 +3,6 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         homework_6();
-
     }
 
     public static int[] generateRandomArray() {
