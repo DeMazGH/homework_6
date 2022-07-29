@@ -93,8 +93,8 @@ public class Main {
         int arraySize = reverseIntArray.length;
         int[] intArray = new int[arraySize];
 
-        for (int i = 0; i < reverseIntArray.length; i++) {
-            intArray[--arraySize] = reverseIntArray[i];
+        for (int j : reverseIntArray) {
+            intArray[--arraySize] = j;
         }
         System.out.println(Arrays.toString(reverseIntArray));
         System.out.println(Arrays.toString(intArray));
